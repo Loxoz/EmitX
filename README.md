@@ -62,6 +62,20 @@ client.clear("test"); // this will return true if any events were found
 // and
 console.log(client.events);
 // Console return: "{}" <- only if you have followed the tutorial.
+
+// Don't forget, the argument can be json, this is a better way that i recommand:
+client.on("check", function(a) {
+  var msg;
+  if (a.type == "success") {
+    msg = "Check successed by " + a.name + " at " + new Date(a.time) + "!";
+  }
+  else {
+    msg = "Check failed";
+  }
+  console.log(msg);
+});
+
+client.emit("check", { type: "success", name: "server", time: (new Date).getTime() } );
 ```
 
 ### Documentation
