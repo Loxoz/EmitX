@@ -1,3 +1,8 @@
+/*
+ * Copyrights Loxoz
+ * https://github.com/Loxoz/EmitX for more informations
+ */
+
 if(typeof module !== "undefined") {
 	module.exports = EmitXListener;
 } else {
