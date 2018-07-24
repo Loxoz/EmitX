@@ -1,6 +1,7 @@
 /*
  * Copyrights Loxoz
  * https://github.com/Loxoz/EmitX for more informations
+ * https://twitter.com/LoxozYT
  */
 
 if(typeof module !== "undefined") {
