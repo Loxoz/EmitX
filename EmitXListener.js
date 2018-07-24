@@ -68,14 +68,8 @@ function listener() {
     };
 
     // Internal tools
-    var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789".split("");
-
     var createid = function() {
-        var id = "";
-        for (iin = 0; iin < 16; iin ++) {
-            id += chars[Math.floor(Math.random() * chars.length)];
-        }
-        return id;
+        return Array.from(Array(20)).map(function(i){return (~~(Math.random()*36)).toString(36)}).join('');
     }
 
     var getspecialid = function() {
