@@ -5,7 +5,7 @@
  */
 
 if(typeof module !== "undefined") {
-	module.exports = EmitXListener;
+	module.exports = listener;
 } else {
 	this.EmitXListener = listener;
 }
