@@ -74,7 +74,7 @@ function listener() {
 
     var getspecialid = function() {
         var id = createid();
-        while (this.hasOwnProperty(id)) {
+        while (this.events.hasOwnProperty(id)) {
             id = createid();
         }
 
