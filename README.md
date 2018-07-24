@@ -76,6 +76,7 @@ client.on("check", function(a) {
 });
 
 client.emit("check", { type: "success", name: "server", time: (new Date).getTime() } );
+// this all would return in console: "Check successed by server at Tue Jul 24 2018 17:46:37 GMT+0200 (heure d’été d’Europe centrale)!" 
 ```
 
 ### Documentation
