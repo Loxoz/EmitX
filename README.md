@@ -11,15 +11,15 @@ There is no hosting websites for the moment, then please download the project an
 ```
 **/!\\** And make you sure to have placed the import befor all of your scripts imports for the html
 
-###### In you node js code:
+###### In you node.js code:
 ```javascript
-var EmitXListener = require("./libs/EmitXListener.js");
+const EmitXListener = require("./libs/EmitXListener.js");
 ```
 
 ### Examples & tutorial:
 *\[...\] are optional arguments*
 ```javascript
-var client = new EmitXListener(); // For node js, the variable created above need to use that too, make sure
+var client = new EmitXListener(); // For node.js, the variable created above need to use that too, make sure
                                   // the name after new is the require.
 
 // create/bind an event:
