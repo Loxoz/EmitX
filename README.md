@@ -65,6 +65,6 @@ console.log(client.events);
 ```
 
 ### Documentation
-~~[here is the documentation](https://github.com/Loxoz/EmitX/documentation)~~ (not avalible for the moment)
+~~[here is the documentation](https://github.com/Loxoz/EmitX/wiki)~~ (not avalible for the moment)
 
 #### Hope you'll enjoy my work
