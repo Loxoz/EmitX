@@ -57,7 +57,8 @@ client.remove(tempevent);
 client.emit("test", "boring imagination.");
 // Console return: "Event 'test' emitted with argument: boring imagination."
 
-// There is one more function you can use, if you want to clear every registered events with the same name:
+// There is one more function you can use, if you want to clear every registered events with the same name,
+// you can use:
 // <variable>.clear(eventname)
 client.clear("test"); // this will return true if any events were found
 // and
