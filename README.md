@@ -86,4 +86,4 @@ client.emit("check", { type: "success", name: "server", time: (new Date).getTime
 ### Documentation
 ~~[here is the documentation](https://github.com/Loxoz/EmitX/wiki)~~ (not avalible for the moment)
 
-#### Hope you'll enjoy my work
+> #### Hope you'll enjoy my work
