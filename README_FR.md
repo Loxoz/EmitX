@@ -38,7 +38,8 @@ console.log(client.events); // use 'console.log(JSON.stringify(client.events));'
 client.emit("test", "hello world");
 // la Console donne: "Event 'test' emitted with argument: hello world"
 
-// mais c'est bien d'avoir des evenements et des emitter, mais si vous voulez en supprimer un, vous pouvez utiliser:
+// mais c'est bien d'avoir des evenements et des emitter, mais si vous voulez en supprimer un,
+// vous pouvez utiliser:
 // <variable>.remove(eventid) || aliases: <variable>.unbind(eventid)
 client.remove("ak9rb62wvbftyj17"); // cela va probablement donner false car l'id n'existe pas,
                                    // sinon il va donner true.
