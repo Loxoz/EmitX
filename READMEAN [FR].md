@@ -6,28 +6,28 @@ Ce petit projet vous permet de créer facilement des events listeners et des eve
 Il n'y a pas de site d'hébergement du code pour ce projet pour le moment, alors veuillez le télécharger et le placer dans votre projet:
 ([npm](https://www.npmjs.com/) va arriver)
 
-###### In your html code:
+###### Dans votre code html:
 ```html
 <script src="libs/EmitXListener.js"></script>
 ```
-**/!\\** And make you sure to have placed the import befor all of your scripts imports for the html
+**/!\\** Et assurez-vous d'avoir pacé l'importation devant tous vos scripts qui l'utilise pour le html
 
-###### In you node.js code:
+###### Dans votre code node.js:
 ```javascript
 const EmitXListener = require("./libs/EmitXListener.js");
 ```
 
-### Examples & tutorial:
-*\[...\] are optional arguments*
+### Exemples & tutoriels:
+*\[...\] sont des arguments optionnels*
 ```javascript
-var client = new EmitXListener(); // For node.js, the variable created above need to use that too, make sure
-                                  // the variable after 'new' is the variable who require the file.
+var client = new EmitXListener(); // Pour node.js, La variable créer au dessus a besoin d'utilise sa aussi, assurez-
+                                  // vous que la variable après le 'new' est la variable qui 'require' le fichier.
 
-// create/bind an event:
+// créer/assigner (create/bind) en événement:
 // <variable>.on(eventname, function) || aliases: <variable>.bind(...)
 client.on("test", function(a) { console.log("Event 'test' emitted with argument: " + a); });
 
-// then check the events list:
+// puis nous verrifions la liste des événements:
 console.log(client.events); // use 'console.log(JSON.stringify(client.events));' instead if you want to be a
                             // text (but you wouldn't see the functions)
 
