@@ -10,7 +10,7 @@ Il n'y a pas de site d'hébergement du code pour ce projet pour le moment, alors
 ```html
 <script src="libs/EmitXListener.js"></script>
 ```
-**/!\\** Et assurez-vous d'avoir pacé l'importation devant tous vos scripts qui l'utilise pour le html
+**/!\\** Et assurez-vous d'avoir placé l'importation devant tous vos scripts qui l'utilise pour le html
 
 ###### Dans votre code node.js:
 ```javascript
@@ -23,7 +23,7 @@ const EmitXListener = require("./libs/EmitXListener.js");
 var client = new EmitXListener(); // Pour node.js, La variable créer au dessus a besoin d'utilise sa aussi, assurez-
                                   // vous que la variable après le 'new' est la variable qui 'require' le fichier.
 
-// créer/assigner (create/bind) en événement:
+// créer/assigner (create/bind) des événement:
 // <variable>.on(eventname, function) || aliases: <variable>.bind(...)
 client.on("test", function(a) { console.log("Event 'test' emitted with argument: " + a); });
 
@@ -31,40 +31,41 @@ client.on("test", function(a) { console.log("Event 'test' emitted with argument:
 console.log(client.events); // use 'console.log(JSON.stringify(client.events));' instead if you want to be a
                             // text (but you wouldn't see the functions)
 
-// and emit an event to test:
+// et on emit un evenement 'test':
 // <variable>.emit(eventname, [argument]) || aliases: <variable>.fire(...)
 client.emit("test", "hello world");
-// Console return: "Event 'test' emitted with argument: hello world"
+// la Console donne: "Event 'test' emitted with argument: hello world"
 
-// but that's cool to have events and emitter, but if you want to remove one, you can use:
+// mais c'est bien d'avoir des evenements et des emitter, mais si vous voulez en supprimer un, vous pouvez utiliser:
 // <variable>.remove(eventid) || aliases: <variable>.unbind(eventid)
-client.remove("ak9rb62wvbftyj17"); // this would return probably false because the id doesn't exists,
-                                   // else it will return true.
+client.remove("ak9rb62wvbftyj17"); // cela va probablement donner false car l'id n'existe pas,
+                                   // sinon il va donner true.
 
-// but there is a problem: The id of the event would change everytimes, then to fix that, you can use:
+// mais il y a un problème: L'id de l'event va changer tout le temps, alors pour fixer ça, vous pouvez utiliser:
 var tempevent = client.on("test", function(a) { console.log("Another test function.") });
-// the special id of the event would be stored in the variable:
+// l'id spéciale de l'evenement sera stocké dans la variable:
 console.log("Special spicies id: " + tempevent);
-// Then the console can return something like that: "Special spicies id: ozcmtdnqxzs9vzkh"
+// Alors la Console va donner quelquechose dans le genre de: "Special spicies id: ozcmtdnqxzs9vzkh"
 
-// emit again the event:
+// on emit encore l'evenement:
 client.emit("test", "oh hi!");
-// Console return: "Event 'test' emitted with argument: oh hi!" | "Another test function."
+// la Console donne: "Event 'test' emitted with argument: oh hi!" | "Another test function."
 
-// so now because we have the id stored in a varible, we can remove this event:
+// donc maintenent parceque nous avons l'id stocké dans une variable, on peut supprimer l'événement:
 client.remove(tempevent);
-// and now:
+// et maintenent:
 client.emit("test", "boring imagination.");
-// Console return: "Event 'test' emitted with argument: boring imagination."
+// la Console donne: "Event 'test' emitted with argument: boring imagination."
 
-// There is one more function you can use, if you want to clear every registered events with the same name:
+// Il y a encore une fonction que vous pouvez utiliser, si vous voulez supprimer tous les événements
+// enregistrés avec le même nom, vous pouvez utiliser:
 // <variable>.clear(eventname)
-client.clear("test"); // this will return true if any events were found
-// and
+client.clear("test"); // cela donnera true si nimpote quel événement a été trouvé
+// et
 console.log(client.events);
-// Console return: "{}" <- only if you have followed the tutorial.
+// la Console donne: "{}" <- seulement si vous avez suivis le tutoriel.
 
-// Don't forget, the argument can be json, this is a better way that i recommand:
+// N'oubliez-pas, l'argument peut être du json, c'est une meilleur solution que je recommande:
 client.on("check", function(a) {
   var msg;
   if (a.type == "success") {
@@ -77,11 +78,11 @@ client.on("check", function(a) {
 });
 
 client.emit("check", { type: "success", name: "server", time: (new Date).getTime() } );
-// this all would return something like that:
+// tout cela donneras quelquechose dans le genre de:
 // "Check successed by server at Tue Jul 24 2018 17:46:37 GMT+0200 (heure d’été d’Europe centrale)!" 
 ```
 
 ### Documentation
-~~[here is the documentation](https://github.com/Loxoz/EmitX/wiki)~~ (not avalible for the moment)
+~~[la documentation c'est par ici](https://github.com/Loxoz/EmitX/wiki)~~ (indisponnible pour le moment)
 
-#### Hope you'll enjoy my work
+#### J'espère que vous apprécierez mon travail
