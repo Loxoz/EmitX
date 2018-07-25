@@ -41,9 +41,9 @@ client.emit("test", "hello world");
 client.remove("ak9rb62wvbftyj17"); // this would return probably false because the id doesn't exists,
                                    // else it will return true.
 
-// but there is a problem: The id of the event would change everytimes, then to fix that, you can use:
+// but there is a problem: The id of the event will change everytimes, then to fix that, you can use:
 var tempevent = client.on("test", function(a) { console.log("Another test function.") });
-// the special id of the event would be stored in the variable:
+// the special id of the event will be stored in the variable:
 console.log("Special spicies id: " + tempevent);
 // Then the console can return something like that: "Special spicies id: ozcmtdnqxzs9vzkh"
 
