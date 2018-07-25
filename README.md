@@ -1,9 +1,10 @@
 # EmitX
 ### Description:
-This little project allows you to easily create events listeners and events emitters for an easy usage of custom events and webshockets usage!
+This little project allows you to easily create events listeners and events emitters for an easy usage of custom events and [webshockets](https://www.websocket.org/) usage!
 
 ### Import:
-There is no hosting websites for the moment, then please download the project and drag where is your project:
+There is no code hosting websites for this project for the moment, then please download the project and drag in your project:
+([npm](https://www.npmjs.com/) is coming)
 
 ###### In your html code:
 ```html
