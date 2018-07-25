@@ -1,5 +1,5 @@
 # EmitX
-> Langs: `FR` [EN](README.md)
+> Langs: [EN](README.md) `FR`
 ### Description:
 Ce petit projet vous permet de créer facilement des events listeners et des events emitters pour un usage facile des evénements personnalisé et l'utilisation des [webshockets](https://www.websocket.org/)
 
