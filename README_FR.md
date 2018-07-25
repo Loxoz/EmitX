@@ -21,8 +21,9 @@ const EmitXListener = require("./libs/EmitXListener.js");
 ### Exemples & tutoriels:
 *\[...\] sont des arguments optionnels*
 ```javascript
-var client = new EmitXListener(); // Pour node.js, La variable créer au dessus a besoin d'utilise sa aussi, assurez-
-                                  // vous que la variable après le 'new' est la variable qui 'require' le fichier.
+var client = new EmitXListener(); // Pour node.js, La variable créer au dessus a besoin d'utilise sa aussi,
+                                  // assurez-vous que la variable après le 'new' est la variable qui 'require'
+                                  // le fichier.
 
 // créer/assigner (create/bind) des événement:
 // <variable>.on(eventname, function) || aliases: <variable>.bind(...)
