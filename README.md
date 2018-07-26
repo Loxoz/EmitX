@@ -10,7 +10,7 @@ This little project allows you to easily create events listeners and events emit
 <!-- or -->
 <script src="libs/EmitXListener.min.js"></script>
 ```
-**[i]** The .min.js version is recommended for the web to save users's data downloading
+**[i]** The .min.js version is recommended for the web to save user's data downloading
 **/!\\** And make you sure to have placed the import befor all of your scripts imports for the html
 
 ###### In you node.js code:
