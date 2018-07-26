@@ -4,11 +4,10 @@
 This little project allows you to easily create events listeners and events emitters for an easy usage of custom events and [webshockets](https://www.websocket.org/) usage!
 
 ### Import:
-There is no code hosting websites for this project for the moment, then please download the project and drag in your project:
-([npm](https://www.npmjs.com/) is coming)
-
 ###### In your html code:
 ```html
+<script src="https://raw.githubusercontent.com/Loxoz/EmitX/master/OpenRelease/EmitXListener.min.js"></script>
+<!-- or -->
 <script src="libs/EmitXListener.js"></script>
 ```
 **/!\\** And make you sure to have placed the import befor all of your scripts imports for the html
@@ -17,6 +16,7 @@ There is no code hosting websites for this project for the moment, then please d
 ```javascript
 const EmitXListener = require("./libs/EmitXListener.js");
 ```
+([npm](https://www.npmjs.com/) import for node.js is coming)
 
 ### Examples & tutorial:
 *\[...\] are optional arguments*
