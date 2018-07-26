@@ -4,7 +4,6 @@
 Ce petit projet vous permet de créer facilement des events listeners et des events emitters pour un usage facile des evénements personnalisé et l'utilisation des [webshockets](https://www.websocket.org/)
 
 ### Importation:
-Il n'y a pas de site d'hébergement du code pour ce projet pour le moment, alors veuillez le télécharger et le placer dans votre projet:
 ([npm](https://www.npmjs.com/) va arriver)
 
 ###### Dans votre code html:
