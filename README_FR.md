@@ -9,8 +9,11 @@ Il n'y a pas de site d'hébergement du code pour ce projet pour le moment, alors
 
 ###### Dans votre code html:
 ```html
-<script src="libs/EmitXListener.js"></script>
+<script src="https://raw.githubusercontent.com/Loxoz/EmitX/master/OpenRelease/EmitXListener.min.js"></script>
+<!-- ou -->
+<script src="libs/EmitXListener.min.js"></script>
 ```
+**[i]** La version .min.js est recommandée pour le web pour limiter le téléchargement des données de l'utilisateur
 **/!\\** Et assurez-vous d'avoir placé l'importation devant tous vos scripts qui l'utilise pour le html
 
 ###### Dans votre code node.js:
