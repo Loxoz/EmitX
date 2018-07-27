@@ -40,7 +40,7 @@ client.emit("test", "hello world");
 
 // but that's cool to have events and emitter, but if you want to remove one, you can use:
 // <variable>.remove(eventid) || aliases: <variable>.unbind(eventid)
-client.remove("ak9rb62wvbftyj17"); // this would return probably false because the id doesn't exists,
+client.remove("ak9rb62wvbftyj17"); // this will return probably false because the id doesn't exists,
                                    // else it will return true.
 
 // but there is a problem: The id of the event will change everytimes, then to fix that, you can use:
@@ -80,7 +80,7 @@ client.on("check", function(a) {
 });
 
 client.emit("check", { type: "success", name: "server", time: (new Date).getTime() } );
-// this all would return something like that:
+// this all will return something like that:
 // "Check successed by server at Tue Jul 24 2018 17:46:37 GMT+0200 (heure d’été d’Europe centrale)!" 
 ```
 
