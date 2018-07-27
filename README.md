@@ -31,7 +31,7 @@ client.on("test", function(a) { console.log("Event 'test' emitted with argument:
 
 // then check the events list:
 console.log(client.events); // use 'console.log(JSON.stringify(client.events));' instead if you want to be a
-                            // text (but you wouldn't see the functions)
+                            // text (but you will not see the functions)
 
 // and emit a test event:
 // <variable>.emit(eventname, [argument]) || aliases: <variable>.fire(...)
