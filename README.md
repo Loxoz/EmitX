@@ -106,7 +106,8 @@ client.on("msg", function(a) {
   var sender = a.sender;
   var name = a.name;
   var time = a.time;
-  appendmessage(a.time, a.sender, a.name, a.message); // thinking it's a function who implement the message in the page
+  appendmessage(a.time, a.sender, a.name, a.message); // thinking it's a function who implement
+                                                      // the message in the page
 });
 ```
 
