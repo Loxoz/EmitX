@@ -83,6 +83,32 @@ client.emit("check", { type: "success", name: "server", time: (new Date).getTime
 // this all will return something like that:
 // "Check successed by server at Tue Jul 24 2018 17:46:37 GMT+0200 (heure d’été d’Europe centrale)!" 
 ```
+### Example for websockets (web only):
+```javascript
+ws = new WebSocket('ws://...');
+client = new EmitXListener();
+
+ws.onmessage = function(raw) {
+  var packet;
+  try {
+      packet = JSON.parse(raw.data);
+  } catch (e) {
+      console.log('Invalid recived packet: ', raw.data);
+      return;
+  }
+    
+  client.emit(packet.p, packet.a);
+}
+
+client.on("msg", function(a) {
+  // considering it's json
+  var msg = a.message;
+  var sender = a.sender;
+  var name = a.name;
+  var time = a.time;
+  appendmessage(a.time, a.sender, a.name, a.message); // thinking it's a function who implement the message in the page
+});
+```
 
 ### Documentation
 ~~[here is the documentation](https://github.com/Loxoz/EmitX/wiki)~~ (not avalible for the moment)
