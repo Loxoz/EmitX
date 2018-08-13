@@ -6,8 +6,6 @@ This little project allows you to easily create events listeners and events emit
 ### Import:
 ###### In your html code:
 ```html
-<script src="https://raw.githubusercontent.com/Loxoz/EmitX/master/OpenRelease/EmitXListener.min.js"></script>
-<!-- or -->
 <script src="libs/EmitXListener.min.js"></script>
 ```
 **[i]** The .min.js version is recommended for the web to save user's data downloading
