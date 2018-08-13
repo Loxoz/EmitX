@@ -11,7 +11,7 @@ Ce petit projet vous permet de créer facilement des events listeners et des eve
 <script src="libs/EmitXListener.min.js"></script>
 ```
 **[i]** La version .min.js est recommandée pour le web pour limiter le téléchargement des données de l'utilisateur
-**/!\\** Et assurez-vous d'avoir placé l'importation devant tous vos scripts qui l'utilise pour le html
+\n**/!\\** Et assurez-vous d'avoir placé l'importation devant tous vos scripts qui l'utilise pour le html
 
 ###### Dans votre code node.js:
 ```javascript
