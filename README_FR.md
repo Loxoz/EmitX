@@ -1,7 +1,7 @@
 # EmitX
 > Langs: [EN](README.md) `FR`
 ### Description:
-Ce petit projet vous permet de créer facilement des events listeners et des events emitters pour un usage facile des evénements personnalisé et l'utilisation des [webshockets](https://www.websocket.org/)
+Ce petit projet vous permet de créer facilement des events listeners et des events emitters pour un usage facile des evénements personnalisés et l'utilisation des [webshockets](https://www.websocket.org/)
 
 ### Importation:
 ([npm](https://www.npmjs.com/) va arriver)
