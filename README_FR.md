@@ -115,4 +115,4 @@ client.on("msg", function(a) {
 ### Documentation
 ~~[la documentation c'est par ici](https://github.com/Loxoz/EmitX/wiki)~~ (indisponnible pour le moment)
 
-> #### J'espère que vous apprécierez mon travail ❤️ metter moi une ⭐️ si vous l'avez trouvé utile pour me supporter
+> #### J'espère que vous apprécierez mon travail ❤️ mettez moi une ⭐️ si vous l'avez trouvé utile pour me supporter
