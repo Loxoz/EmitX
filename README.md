@@ -98,7 +98,7 @@ ws.onmessage = function(raw) {
   client.emit(packet.name, packet.content);
 }
 
-client.on("msg", function(a) { // 'msg' is the name of the packet and 'a' here is the content of the packet
+client.on("msg", function(a) { // 'msg' is the name of the packet and 'a' is the content of the packet
   var msg = a.message;
   var sender = a.sender;
   var name = a.name;
