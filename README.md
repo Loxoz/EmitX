@@ -89,17 +89,16 @@ client = new EmitXListener();
 ws.onmessage = function(raw) {
   var packet;
   try {
-      packet = JSON.parse(raw.data);
+      packet = JSON.parse(raw.data); // We only accepts JSON packets
   } catch (e) {
-      console.log('Invalid recived packet: ', raw.data);
+      console.log('Invalid recived packet: ' + raw.data);
       return;
   }
     
-  client.emit(packet.p, packet.a);
+  client.emit(packet.name, packet.content);
 }
 
-client.on("msg", function(a) {
-  // considering it's json
+client.on("msg", function(a) { // 'msg' is the name of the packet and 'a' here is the content of the packet
   var msg = a.message;
   var sender = a.sender;
   var name = a.name;
