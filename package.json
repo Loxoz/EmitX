@@ -1,0 +1,15 @@
+{
+	"name": "emitx",
+	"description": "Create custom events emitters and fire them",
+	"main": "EmitXListener.js",
+	"author": "Loxoz",
+	"scripts": {
+		"start": "echo This is a library and not an executable javascript file, please refer to https://github.com/Loxoz/EmitX for more infos."
+	},
+	"dependencies": {},
+	"optionalDependencies": {},
+	"bugs": {
+		"url": "https://github.com/Loxoz/EmitX/issues"
+	},
+	"homepage": "https://github.com/Loxoz/EmitX"
+}
