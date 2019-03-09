@@ -2,6 +2,7 @@
  * Copyrights Loxoz
  * https://github.com/Loxoz/EmitX for more informations
  * https://twitter.com/LoxozYT
+ * Give me a patreon ;) https://patreon.com/Loxoz
  */
 
 if(typeof module !== "undefined") {
@@ -14,7 +15,7 @@ function listener() {
     this.events = {};
     
     // >>> recieve
-    this.on = function(e, f) {
+    this.on = (e, f) => {
         if (typeof f == "function") {
             var spclid = getspecialid();
             this.events[spclid] = { name: e, function: f };
@@ -26,23 +27,26 @@ function listener() {
         }
     }
     // aliases
-    this.bind = function(e, f) { this.on(e, f); };
+    this.bind = (e, f) => { this.on(e, f); };
 
     // >>> Emit
-    this.emit = function(e, a) {
-        for (evi in this.events) {
-            if (this.events[evi].name == e) {
-                if (typeof this.events[evi].function == "function") {
-                    this.events[evi].function(a);
+    this.emit = (e, a, d = 0) => {
+        if (!isNaN(d)) {d=0;}
+        setTimeout(() => {
+            for (evi in this.events) {
+                if (this.events[evi].name == e) {
+                    if (typeof this.events[evi].function == "function") {
+                        this.events[evi].function(a);
+                    }
                 }
             }
-        }
+        }, d);
     }
     // aliases
-    this.fire = function(e, a) { this.emit(e, a); };
+    this.fire = (e, a, d) => { this.emit(e, a, d); };
 
     // >>> Remove
-    this.remove = function(id) {
+    this.remove = (id) => {
         if (this.events[id] != undefined) {
             delete this.events[id];
             return true;
@@ -52,10 +56,10 @@ function listener() {
         }
     };
     // aliases
-    this.unbind = function(id) { this.remove(id); };
+    this.unbind = (id) => { this.remove(id); };
 
     // >>> Clear
-    this.clear = function(e) {
+    this.clear = (e) => {
         var w = false;
         for (evi in this.events) {
             if (this.events[evi].name == e) {
@@ -70,7 +74,7 @@ function listener() {
     // Internal tools
     var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789".split("");
 
-    var createid = function() {
+    var createid = () => {
         var id = "";
         for (iin = 0; iin < 16; iin ++) {
             id += chars[Math.floor(Math.random() * chars.length)];
@@ -78,7 +82,7 @@ function listener() {
         return id;
     }
 
-    var getspecialid = function() {
+    var getspecialid = () => {
         var id = createid();
         if (this.events != undefined) {
             while (this.events.hasOwnProperty(id)) {
